@@ -1,9 +1,8 @@
-package com.service.Impl;
+package mall.service.Impl;
 
+import mall.MallApplicationTests;
 import mall.enums.RoleEnum;
-import com.MallApplicationTests;
 import mall.pojo.User;
-import mall.service.Impl.UserServiceImpl;
 import mall.vo.ResponseVo;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;

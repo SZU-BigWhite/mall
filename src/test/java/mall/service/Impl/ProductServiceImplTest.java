@@ -1,9 +1,8 @@
-package com.service.Impl;
+package mall.service.Impl;
 
-import com.MallApplicationTests;
+import mall.MallApplicationTests;
 import com.github.pagehelper.PageInfo;
 import mall.pojo.Product;
-import mall.service.Impl.ProductServiceImpl;
 import mall.vo.ResponseVo;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;

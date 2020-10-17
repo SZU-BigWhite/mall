@@ -1,7 +1,6 @@
-package com.service.Impl;
+package mall.service.Impl;
 
-import com.MallApplicationTests;
-import mall.service.Impl.CategoryServiceImpl;
+import mall.MallApplicationTests;
 import mall.vo.CategoryVo;
 import mall.vo.ResponseVo;
 import lombok.extern.slf4j.Slf4j;

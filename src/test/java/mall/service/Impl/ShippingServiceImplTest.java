@@ -1,11 +1,10 @@
-package com.service.Impl;
+package mall.service.Impl;
 
-import com.MallApplicationTests;
+import mall.MallApplicationTests;
 import mall.form.ShippingGetForm;
 import mall.form.ShippingUpdateForm;
 import com.github.pagehelper.PageInfo;
 import mall.form.ShippingAddForm;
-import mall.service.Impl.ShippingServiceImpl;
 import mall.vo.ResponseVo;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;

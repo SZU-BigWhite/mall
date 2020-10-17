@@ -1,4 +1,4 @@
-package com;
+package mall;
 
 
 import org.junit.Test;

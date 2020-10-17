@@ -1,6 +1,6 @@
-package com.dao;
+package mall.dao;
 
-import com.MallApplicationTests;
+import mall.MallApplicationTests;
 
 
 public class CategoryMapperTest extends MallApplicationTests {

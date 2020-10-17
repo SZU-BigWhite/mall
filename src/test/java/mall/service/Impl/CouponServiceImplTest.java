@@ -1,9 +1,8 @@
-package com.service.Impl;
+package mall.service.Impl;
 
-import com.MallApplicationTests;
+import mall.MallApplicationTests;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import mall.service.Impl.CouponServiceImpl;
 import mall.vo.ResponseVo;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;

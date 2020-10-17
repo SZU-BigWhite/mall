@@ -1,7 +1,6 @@
-package com.dao;
+package mall.dao;
 
-import com.MallApplicationTests;
-import mall.dao.OrderMapper;
+import mall.MallApplicationTests;
 import mall.pojo.Order;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
