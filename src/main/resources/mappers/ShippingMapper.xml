@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="mall.dao.ShippingMapper">
-  <resultMap id="BaseResultMap" type="mall.pojo.Shipping">
+<mapper namespace="com.imooc.mall.dao.ShippingMapper">
+  <resultMap id="BaseResultMap" type="com.imooc.mall.pojo.Shipping">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="user_id" jdbcType="INTEGER" property="userId" />
     <result column="receiver_name" jdbcType="VARCHAR" property="receiverName" />
@@ -29,7 +29,7 @@
     delete from mall_shipping
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="mall.pojo.Shipping">
+  <insert id="insert" parameterType="com.imooc.mall.pojo.Shipping">
     insert into mall_shipping (id, user_id, receiver_name, 
       receiver_phone, receiver_mobile, receiver_province, 
       receiver_city, receiver_district, receiver_address, 
@@ -41,7 +41,7 @@
       #{receiverZip,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" parameterType="mall.pojo.Shipping" useGeneratedKeys="true" keyProperty="id">
+  <insert id="insertSelective" parameterType="com.imooc.mall.pojo.Shipping" useGeneratedKeys="true" keyProperty="id">
     insert into mall_shipping
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -114,7 +114,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="mall.pojo.Shipping">
+  <update id="updateByPrimaryKeySelective" parameterType="com.imooc.mall.pojo.Shipping">
     update mall_shipping
     <set>
       <if test="userId != null">
@@ -153,7 +153,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="mall.pojo.Shipping">
+  <update id="updateByPrimaryKey" parameterType="com.imooc.mall.pojo.Shipping">
     update mall_shipping
     set user_id = #{userId,jdbcType=INTEGER},
       receiver_name = #{receiverName,jdbcType=VARCHAR},
@@ -168,13 +168,13 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <select id="selectByUserid" parameterType="java.lang.Integer" resultType="mall.pojo.Shipping">
+  <select id="selectByUserid" parameterType="java.lang.Integer" resultType="com.imooc.mall.pojo.Shipping">
     select
     <include refid="Base_Column_List" />
     from mall_shipping
     where user_id = #{userId,jdbcType=INTEGER}
   </select>
-  <select id="selectByIdAndUserId" parameterType="java.lang.Integer" resultType="mall.pojo.Shipping">
+  <select id="selectByIdAndUserId" parameterType="java.lang.Integer" resultType="com.imooc.mall.pojo.Shipping">
     select
     <include refid="Base_Column_List" />
     from mall_shipping

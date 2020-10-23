@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="mall.dao.CouponMapper">
-  <resultMap id="BaseResultMap" type="mall.pojo.Coupon">
+<mapper namespace="com.imooc.mall.dao.CouponMapper">
+  <resultMap id="BaseResultMap" type="com.imooc.mall.pojo.Coupon">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="productId" jdbcType="INTEGER" property="productid" />
     <result column="decrease" jdbcType="DECIMAL" property="decrease" />
@@ -20,13 +20,13 @@
     delete from mall_coupon
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="mall.pojo.Coupon">
+  <insert id="insert" parameterType="com.imooc.mall.pojo.Coupon">
     insert into mall_coupon (id, productId, decrease, 
       num)
     values (#{id,jdbcType=INTEGER}, #{productid,jdbcType=INTEGER}, #{decrease,jdbcType=DECIMAL}, 
       #{num,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="mall.pojo.Coupon">
+  <insert id="insertSelective" parameterType="com.imooc.mall.pojo.Coupon">
     insert into mall_coupon
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -57,7 +57,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="mall.pojo.Coupon">
+  <update id="updateByPrimaryKeySelective" parameterType="com.imooc.mall.pojo.Coupon">
     update mall_coupon
     <set>
       <if test="productid != null">
@@ -72,7 +72,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="mall.pojo.Coupon">
+  <update id="updateByPrimaryKey" parameterType="com.imooc.mall.pojo.Coupon">
     update mall_coupon
     set productId = #{productid,jdbcType=INTEGER},
       decrease = #{decrease,jdbcType=DECIMAL},
@@ -85,7 +85,7 @@
     from mall_coupon
     where productId = #{productId,jdbcType=INTEGER}
   </select>
-  <update id="updateByProductId" parameterType="mall.pojo.Coupon">
+  <update id="updateByProductId" parameterType="com.imooc.mall.pojo.Coupon">
     update mall_coupon
     set
       decrease = #{decrease,jdbcType=DECIMAL},
