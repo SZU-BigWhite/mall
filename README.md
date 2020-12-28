@@ -14,3 +14,7 @@
     接收支付系统，完成订单
     优惠券抢购成功发送给mq
   
+#### 克隆项目
+```
+git clone  https://github.com/SZU-BigWhite/mall.git
+```
